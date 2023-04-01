@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 // Theme Color
-const Color primaryColor = Color(0xff003664);
-const Color secondaryColor = Color(0xff25ACE6);
+const Color primaryColor = Color(0xff00D1A8);
+const Color secondaryColor = Colors.black;
 
 // Text Color
 const Color primaryTextColor = Color(0xff2D3134);

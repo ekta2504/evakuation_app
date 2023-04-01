@@ -52,5 +52,6 @@ ThemeData darkThemeData() {
     primaryColor: Colors.black,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     fontFamily: 'Poppins',
+    
   );
 }

@@ -1,0 +1,51 @@
+{
+    "appName" : "Saudi Law",
+    "ok" : "OK",
+    "cancel" : "cancel",
+    "alertPermissionNotRestricted": "Alert Permission",
+    "internetNotConnected" : "No internet",
+    "poorInternetConnection" : "Poor Internet",
+    "delete" : "Delete",
+    "edit": "Edit",
+    "done": "Done",
+    "cameraTitle": "Camera",
+    "galleryTitle": "Gallery",
+    "no": "No",
+    "yes" : "Yes",
+    "email": "Your Email",
+    "forgetPassword": "Forget Password",
+    "msgEmail": "Enter Your Email",
+    "logIn": "Log In",
+    "password" : "Password",
+    "msgPassword" : "Enter Your Password",
+    "register": "Register",
+    "noAcc" : "Don't have an Account",
+    "favourites": "Favourites",
+    "msgEmailEmpty" : "Email is empty",
+    "msgEmailInvalid" : "Email is not valid",      
+    "msgPasswordEmpty" : "Password is empty",
+    "msgPasswordError" :  "Password should be atleast 8 characters long and have atleast one uppercase, one alphanumeric and one number.",
+    "msgPasswordNotMatch" : "Password doesn't match",
+    "otherDocuments" : "Other Documents",
+    "events" : "Events",
+    "favourites" : "Favourites",
+    "msgName": "Enter your fullname",
+    "name": "Full Name",
+    "confirmPassword": "Confirm Your Password",
+    "msgConfirmPassword": "Enter Confirm Password",
+    "phoneNum": "Phone",
+    "msgPhoneNum" : "Enter your Phone",
+    "msg" : "By clicking on Register/Sign up you agreed to our",
+    "privacy" : "Privacy Policy",
+    "services" : "Terms of Services",
+    "haveAcc": "Already have an Account?",
+    "resetPassword":  "Send Me A New Password"
+
+
+
+
+
+
+
+    
+}

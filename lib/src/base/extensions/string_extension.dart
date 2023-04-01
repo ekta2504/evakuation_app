@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/src/base/utils/constants/app_constant.dart';
-import 'package:flutter_boilerplate/src/base/utils/localization/localization.dart';
 import '../utils/constants/color_constant.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_boilerplate/src/widgets/toast_message.dart';
 
 extension StringExtension on String {
   String getInitials() => isNotEmpty
@@ -16,11 +17,14 @@ extension StringExtension on String {
   }
 
   // Check Email Validation
-  String? isValidEmail() {
+  String? isValidEmail(BuildContext context) {
     if (trim().isEmpty) {
-      return Localization.of().msgEmailEmpty;
+      showToast(AppLocalizations.of(context)?.msgEmailEmpty ?? '');
+      return "";
+      // AppLocalizations.of(context)?.msgEmailEmpty ?? '';
     } else if (!_emailValidation(trim())) {
-      return Localization.of().msgEmailInvalid;
+      showToast(AppLocalizations.of(context)?.msgEmailInvalid ?? '');
+      return ""; //AppLocalizations.of(context)?.msgEmailInvalid ?? '';
     } else {
       return null;
     }
@@ -40,20 +44,22 @@ extension StringExtension on String {
   }
 
   // Check Password Validation
-  String? isValidPassword() {
+  String? isValidPassword(BuildContext context) {
     if (trim().isEmpty) {
-      return Localization.of().msgPasswordEmpty;
+      showToast(AppLocalizations.of(context)?.msgPasswordEmpty ?? '');
+      return ""; // AppLocalizations.of(context)?.msgPasswordEmpty ?? '';
     } else if (!_passwordValidation(trim())) {
-      return Localization.of().msgPasswordError;
+      showToast(AppLocalizations.of(context)?.msgPasswordError ?? '');
+      return ""; // AppLocalizations.of(context)?.msgPasswordError ?? '';
     } else {
       return null;
     }
   }
 
   // Check Valid Confirm Password
-  String? isValidConfirmPassword(String newPassword) {
+  String? isValidConfirmPassword(String newPassword, BuildContext context) {
     if (newPassword.trim() != trim()) {
-      return Localization.of().msgPasswordNotMatch;
+      return AppLocalizations.of(context)?.msgPasswordNotMatch ?? '';
     } else {
       return null;
     }

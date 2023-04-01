@@ -22,3 +22,4 @@ const double fontSize18 = 18.0;
 const double fontSize24 = 24.0;
 const double fontSize26 = 26.0;
 const double fontSize28 = 28.0;
+const double fontSize30 = 30.0;

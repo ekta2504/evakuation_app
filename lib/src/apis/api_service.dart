@@ -6,6 +6,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import '../base/utils/constants/preference_key_constant.dart';
 import '../base/utils/preference_utils.dart';
+import '../widgets/toast_message.dart';
 import 'error_utils.dart';
 
 class ApiService {
@@ -68,7 +69,6 @@ class ApiService {
         options: options,
       ));
     }
-    return null;
   }
 
   Future<Response?> post(String endUrl,
@@ -83,8 +83,13 @@ class ApiService {
         options: options,
       ));
     }
-    return null;
   }
+
+  void showToastForResponse(Response response) {
+  if (response.data['code'] == 1) {
+  } else if (response.data['code'] == 0) {
+  }
+}
 
   Future<Response?> delete(String endUrl,
       {Map<String, dynamic>? data,
@@ -99,7 +104,6 @@ class ApiService {
         options: options,
       ));
     }
-    return null;
   }
 
   Future<Response?> multipartPost(String endUrl,
@@ -111,6 +115,5 @@ class ApiService {
         options: options,
       ));
     }
-    return null;
   }
 }

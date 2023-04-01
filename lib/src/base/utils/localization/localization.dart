@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/src/base/dependencyinjection/locator.dart';
+import 'package:flutter_boilerplate/src/base/utils/localization/localization_en.dart';
 import 'package:flutter_boilerplate/src/base/utils/navigation_utils.dart';
 import 'package:intl/intl.dart';
 
-import 'localization_en.dart';
 
 class MyLocalizationsDelegate extends LocalizationsDelegate<Localization> {
   const MyLocalizationsDelegate();
@@ -14,9 +14,6 @@ class MyLocalizationsDelegate extends LocalizationsDelegate<Localization> {
   bool isSupported(Locale locale) => [
         'en',
       ].contains(locale.languageCode);
-
-// @override
-////   bool isSupported(Locale locale) => ['en', 'fr'].contains(locale.languageCode);
 
   @override
   Future<Localization> load(Locale locale) => _load(locale);
@@ -30,13 +27,16 @@ class MyLocalizationsDelegate extends LocalizationsDelegate<Localization> {
     final localeName = Intl.canonicalizedLocale(name);
     Intl.defaultLocale = localeName;
 
-    // if( locale.languageCode == "fr" ) {
-    //   return LocalizationFR();
+    
+
+    // if( locale.languageCode == "ar" ) {
+    //   return LocalizationAR();
     // } else {
-    //   return LocalizationEN();
+    //  return LocalizationAR();
     // }
 
-    return LocalizationEN();
+     return LocalizationEN();
+     
   }
 
   @override
@@ -66,13 +66,61 @@ abstract class Localization {
   String get no;
   String get save;
   String get search;
+  String get otherDocuments;
+  String get events;
+  String get favourites;
 
   // Auth Stringd
   String get email;
+  String get msgEmail;
+  String get confirmPassword;
+  String get msgConfirmPassword;
+  String get msgPassword;
   String get password;
+  String get logIn;
+  String get noAcc;
+  String get haveAcc;
+  String get resetPassword;
+  String get register;
+  String get privacy;
+  String get services;
+  String get phoneNum;
+  String get msgPhoneNum;
+  String get name;
+  String get msg;
+  String get msgName;
+  String get forgetPassword;
   String get msgEmailEmpty;
   String get msgEmailInvalid;
   String get msgPasswordEmpty;
   String get msgPasswordError;
   String get msgPasswordNotMatch;
+  String get noNetwork;
+  String get serverError;
+  String get userName;
+  String get forgotLoginDetail;
+  String get helpWithSigningIn;
+  String get signUp;
+  String get submit;
+  String get subScriptionType;
+  String get firstName;
+  String get lastName ;
+  String get city ;
+  String get birtDate;
+  String get upload;
+  String get calender;
+  String get profile;
+  String get searchResult;
+  String get section;
+  String get year;
+  String get date;
+  String get month;
+  String get selectYourSubscriptionType;
+  String get student;
+  String get company;
+  String get govenment;
+  String get searchByWord;
+  String get createEvents;
+  String get editProfile;
+  
 }
